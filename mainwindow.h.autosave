@@ -1,0 +1,28 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <QLabel>
+#include <QTimer>
+#include <QCheckBox>
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+    QLabel inf;
+    QTimer Timer;
+    QCheckBox Shower;
+    QCheckBox Starter;
+public:
+    MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+public slots:
+    void stop();
+    void start();
+    void show();
+    void hide();
+};
+
+#endif // MAINWINDOW_H
